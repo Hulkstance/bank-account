@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26779EA2-3CC2-4960-8C8F-92636DC145E4}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{46392DD2-014E-481F-BD39-9B24A059DE1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A5B98F3A-845B-4131-B4C3-3ADCE42B90A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Api", "src\BankAccount.Api\BankAccount.Api.csproj", "{6499AA2E-426D-4B7D-B149-B69769B49BB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6499AA2E-426D-4B7D-B149-B69769B49BB5} = {46392DD2-014E-481F-BD39-9B24A059DE1B}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6499AA2E-426D-4B7D-B149-B69769B49BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6499AA2E-426D-4B7D-B149-B69769B49BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6499AA2E-426D-4B7D-B149-B69769B49BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6499AA2E-426D-4B7D-B149-B69769B49BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
