@@ -18,6 +18,9 @@ builder.Services.AddMarten(options =>
         options.DatabaseSchemaName = schemaName;
         options.Connection(builder.Configuration.GetConnectionString("Postgres")!);
     
+        // Disable the absurdly verbose Npgsql logging
+        options.DisableNpgsqlLogging = true;
+        
         options.UseSystemTextJsonForSerialization(EnumStorage.AsString);
 
         options.Projections.Add<BankAccountProjection>(ProjectionLifecycle.Inline);
