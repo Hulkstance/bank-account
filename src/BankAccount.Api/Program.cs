@@ -16,17 +16,11 @@ builder.Services.AddMarten(options =>
         var schemaName = Environment.GetEnvironmentVariable("SchemaName") ?? "BankAccount";
         options.Events.DatabaseSchemaName = schemaName;
         options.DatabaseSchemaName = schemaName;
-        options.Connection(builder.Configuration.GetConnectionString("Postgres")
-                           ?? throw new InvalidOperationException("Postgres connection string not found"));
+        options.Connection(builder.Configuration.GetConnectionString("Postgres")!);
     
         options.UseSystemTextJsonForSerialization(EnumStorage.AsString);
 
         options.Projections.Add<BankAccountProjection>(ProjectionLifecycle.Inline);
-
-        if (builder.Environment.IsDevelopment())
-        {
-            options.AutoCreateSchemaObjects = AutoCreate.All;
-        }
     })
     .OptimizeArtifactWorkflow(TypeLoadMode.Static)
     .UseLightweightSessions()
